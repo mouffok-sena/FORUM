@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Website with Login & Registration Form | Codehal</title>
+
+</head>
+<body>
+    
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Container -->
+    <div class="container">
+        <div class="content">
+            <!-- Logo -->
+            <h2 class="logo"><i class='bx 
+                bxl-firebase'></i>Forum</h2> 
+        
+            <!-- Text and social icons -->
+            <div class="text-sci">
+                <h2>Welcome!<br><span>To Our Forum.</span></h2>
+                <p>Nous sommes ravis de vous accueillir sur notre nouveau forum.</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login and registration boxes -->
+        <div class="logreg-box">
+            <!-- Login form -->
+            <div class="form-box login">
+                <form action="/login" method="POST">
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope' ></i></span>
+                        <input type="text"  id="username" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn">Sign In</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration form -->
+            <div class="form-box register">
+                <form action="/signup" method="POST">
+                    <h2>Sign up</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user' ></i></span>
+                        <input type="text" id="username" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope' ></i></span>
+                        <input type="email" id="email" name="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" value="Signup" class="btn">Sign Up</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+
+    <script src="./script/script.js"></script>
+</body>
+</html>

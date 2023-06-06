@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <!-- En-tête -->
+    <h1>Welcome!</h1>
+    <p>You have successfully logged in.</p>
+    <a href="/logout">Logout</a>
+
+    <header class="header">
+        <!-- Barre de navigation -->
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <!-- Formulaire de recherche -->
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </header>
+
+    <div class="header fade-in">
+        <h1>Welcome to the Forum</h1>
+    </div>
+
+    <div class="new-post-form fade-in">
+        <!-- Formulaire de création d'un nouveau post -->
+        <h2>Create a New Post</h2>
+        <form>
+            <input type="text" placeholder="Post Title">
+            <textarea placeholder="Post Content"></textarea>
+            <input type="file" accept="image/*">
+            <div class="button">Create Post</div>
+        </form>
+    </div>
+    
+
+    <div class="post fade-in">
+        <!-- Post 1 -->
+        <h2>post 1</h2>
+        <img src="img/poo.jpg" alt="Image description">
+        <p>Post content goes here.</p>
+        <div class="buttons">
+            <div class="button like"><i class="fas fa-thumbs-up icon"></i></div>
+            <div class="button dislike"><i class="fas fa-thumbs-down icon"></i></div>
+            <div class="button comment"><i class="fas fa-comment icon"></i></div>
+        </div>
+    </div>
+
+    <div class="post fade-in">
+        <!-- Post 2 -->
+        <h2>post 2</h2>
+        <img src="img/hector.jpg" alt="Image description">
+        <p>Post content goes here.</p>
+        <div class="buttons">
+            <div class="button like"><i class="fas fa-thumbs-up icon"></i></div>
+            <div class="button dislike"><i class="fas fa-thumbs-down icon"></i></div>
+            <div class="button comment"><i class="fas fa-comment icon"></i></div>
+        </div>
+    </div>
+
+    <div class="post fade-in">
+        <!-- Post 3 -->
+        <h3>post 3</h3>
+        <img src="img/voia.jpg" alt="Image description">
+        <p>Post content goes here.</p>
+        <div class="buttons">
+            <div class="button like"><i class="fas fa-thumbs-up icon"></i></div>
+            <div class="button dislike"><i class="fas fa-thumbs-down icon"></i></div>
+            <div class="button comment"><i class="fas fa-comment icon"></i></div>
+        </div>
+    </div>
+
+    <div class="post fade-in">
+        <!-- Post 4 -->
+        <h4>post 4</h4>
+        <img src="img/rex.jpg" alt="Image description">
+        <p>Post content goes here.</p>
+        <div class="buttons">
+            <div class="button like"><i class="fas fa-thumbs-up icon"></i></div>
+            <div class="button dislike"><i class="fas fa-thumbs-down icon"></i></div>
+            <div class="button comment"><i class="fas fa-comment icon"></i></div>
+        </div>
+    </div>
+
+    <!-- Ajoutez d'autres publications ici -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+        // Script JavaScript
+        const posts = document.querySelectorAll('.post');
+        
+        function fadeInPosts() {
+            posts.forEach((post, index) => {
+                setTimeout(() => {
+                    post.classList.add('show');
+                }, index * 200);
+            });
+        }
+        
+        fadeInPosts();
+        
+        const buttons = document.querySelectorAll('.buttons');
+        
+        function fadeInButtons() {
+            buttons.forEach((button, index) => {
+                setTimeout(() => {
+                    button.classList.add('show');
+                }, index * 200);
+            });
+        }
+        
+        fadeInButtons();
+    </script>
+</body>
+</html>

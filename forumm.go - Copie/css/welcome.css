@@ -1,0 +1,196 @@
+body {
+    background: url('../img/background.jpeg');
+    background-size: contain;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 16px;
+    color: #e4e4e4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 30px;
+
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navbar a:hover::after{
+transform: translateY(0);
+opacity: 1;
+}
+
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.search-bar input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding-left: 10px;
+}
+
+.search-bar input {
+    color: #e4e4e4;
+
+}
+
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-bar button i {
+font-size: 22px;
+color: #e4e4e4;
+}
+
+
+
+.post {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+.post.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.post img {
+    display: block;
+    margin: 0 auto;
+    text-align:center;
+    width: 300px; /* Remplacez la valeur par la taille souhaitée */
+    height: auto; /* Laissez "auto" pour maintenir les proportions d'origine */
+
+}
+
+
+.post h2, .post h3, .post h4 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.post p {
+    color: #ccc;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.buttons.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.search {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search input[type="text"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    width: 200px;
+}
+
+.icon {
+    color: white;
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+.new-post-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.new-post-form input[type="text"], .new-post-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.new-post-form .button {
+    margin-top: 10px;
+}
